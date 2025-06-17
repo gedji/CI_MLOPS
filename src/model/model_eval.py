@@ -17,10 +17,10 @@ from mlflow.models import infer_signature
 # import dagshub
 # dagshub.init(repo_owner='bhattpriyang', repo_name='ci_test', mlflow=True)
 # mlflow.set_experiment("Final_model")
-# mlflow.set_tracking_uri("https://dagshub.com/bhattpriyang/ci_test.mlflow")
+# mlflow.set_tracking_uri("https://dagshub.com/gedji/ci_test.mlflow")
 
 # import dagshub
-# dagshub.init(repo_owner='bhattpriyang', repo_name='CI_MLOPS', mlflow=True)
+# dagshub.init(repo_owner='gedji', repo_name='CI_MLOPS', mlflow=True)
 # mlflow.set_experiment("Final_model")
 
 import os
@@ -99,7 +99,7 @@ def evaluation_model(model, X_test: pd.DataFrame, y_test: pd.Series, model_name:
         mlflow.log_artifact(cm_path)
         
         # Log the model
-        mlflow.sklearn.log_model(model, model_name.replace(' ', '_'))
+        # mlflow.sklearn.log_model(model, model_name.replace(' ', '_'))
 
         metrics_dict = {
             'accuracy': acc,
