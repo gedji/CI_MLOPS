@@ -99,7 +99,7 @@ def evaluation_model(model, X_test: pd.DataFrame, y_test: pd.Series, model_name:
         mlflow.log_artifact(cm_path)
         
         # Log the model
-        # mlflow.sklearn.log_model(model, model_name.replace(' ', '_'))
+        mlflow.sklearn.log_model(model, model_name.replace(' ', '_'))
 
         metrics_dict = {
             'accuracy': acc,
