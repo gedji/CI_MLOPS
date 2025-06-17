@@ -69,6 +69,7 @@ def evaluation_model(model, X_test: pd.DataFrame, y_test: pd.Series, model_name:
         n_estimators = params["model_building"]["n_estimators"]
         
         y_pred = model.predict(X_test)
+        print(f"Predictions: {y_pred[:5]}")  # Print first 5 predictions for debugging
 
         # Calculate metrics
         acc = accuracy_score(y_test, y_pred)
