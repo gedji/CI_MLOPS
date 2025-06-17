@@ -76,6 +76,7 @@ def evaluation_model(model, X_test: pd.DataFrame, y_test: pd.Series, model_name:
         precision = precision_score(y_test, y_pred)
         recall = recall_score(y_test, y_pred)
         f1 = f1_score(y_test, y_pred)
+        print(f"Accuracy: {acc}, Precision: {precision}, Recall: {recall}, F1 Score: {f1}")
         
         mlflow.log_param("Test_size",test_size)
         mlflow.log_param("n_estimators",n_estimators) 
