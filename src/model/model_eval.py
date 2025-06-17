@@ -104,7 +104,7 @@ def evaluation_model(model, X_test: pd.DataFrame, y_test: pd.Series, model_name:
         print(f"Confusion matrix logged to MLflow: {cm_path}")
         
         # Log the model
-        mlflow.sklearn.log_model(model, model_name.replace(' ', '_'))
+        # mlflow.sklearn.log_model(model, model_name.replace(' ', '_'))
         print(f"Model {model_name} logged to MLflow")
 
         metrics_dict = {
